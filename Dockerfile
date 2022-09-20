@@ -7,6 +7,8 @@ RUN pip install -r requirements.txt
 
 COPY src app
 
+VOLUME ["/conf"]
+
 WORKDIR /app
 
-CMD flask --app app --debug run --host=0.0.0.0 
+ENTRYPOINT ["python", "app.py"]
