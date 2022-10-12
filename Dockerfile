@@ -11,4 +11,6 @@ VOLUME ["/conf"]
 
 WORKDIR /app
 
+ENV TERM xterm-256color
+
 ENTRYPOINT ["python", "app.py"]
